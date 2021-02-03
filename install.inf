@@ -1,0 +1,34 @@
+[info]
+title=Tab-Rename
+desc=Allows renaming editor tabs
+type=cudatext-plugin
+subdir=cuda_tab_rename
+homepage=https://github.com/halfbrained/cuda_tab_rename
+
+[item1]
+section=events
+events=on_open
+
+[item2]
+section=commands
+caption=Tab-Rename\Rename Current Tab
+method=rename_current
+
+[item3]
+section=commands
+caption=Tab-Rename\Reset Current Tab Name
+method=clear_current
+
+[item4]
+section=events
+events=on_save
+
+[item5]
+section=events
+events=on_exit
+
+[item100]
+section=commands
+caption=Tab-Rename\Config
+method=config
+menu=o
