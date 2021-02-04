@@ -23,10 +23,6 @@ method=clear_current
 section=events
 events=on_save
 
-[item5]
-section=events
-events=on_exit
-
 [item100]
 section=commands
 caption=Tab-Rename\Config
