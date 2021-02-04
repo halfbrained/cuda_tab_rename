@@ -67,9 +67,6 @@ class Command:
           e.set_prop(PROP_TAB_TITLE, os.path.basename(path))
             
  
-  def on_exit(self, *args, **vargs):
-    self.save_cfg()
-      
   def save_cfg(self):
     namemap[PREFIX_KEY] = prefix
     with open(fn_config, 'w', encoding='utf-8') as f:
