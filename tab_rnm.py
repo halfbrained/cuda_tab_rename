@@ -79,9 +79,7 @@ class Command:
       with open(fn_config, 'r', encoding='utf-8') as f:
         j = json.load(f)
 
-      pre = j.get(PREFIX_KEY)
-      if pre != None:
-        prefix = pre
+      prefix = j.get(PREFIX_KEY, prefix)
 
       namemap.clear()
       namemap.update(j)

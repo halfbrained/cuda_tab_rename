@@ -7,7 +7,7 @@ homepage=https://github.com/halfbrained/cuda_tab_rename
 
 [item1]
 section=events
-events=on_open
+events=on_open,on_save
 
 [item2]
 section=commands
@@ -18,10 +18,6 @@ method=rename_current
 section=commands
 caption=Tab-Rename\Reset Current Tab Name
 method=clear_current
-
-[item4]
-section=events
-events=on_save
 
 [item100]
 section=commands
