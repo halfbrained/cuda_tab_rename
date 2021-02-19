@@ -1,5 +1,9 @@
 Plugin for CudaText.
-Allows to rename tabs in the editor.
+Allows to rename tabs in the editor. 
+
+If tab is renamed, its header shows changed name for all next CudaText sessions, 
+until you call the "Reset" command, or until plugin is uninstalled. Names of tabs 
+are stored in a file in the CudaText "settings" folder.
 
 Adds menu item "Rename tab" to editor tab context menu. 
 And commands to rename tab and reset name to main menu in:
