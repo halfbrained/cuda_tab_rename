@@ -2,9 +2,9 @@ import os
 import json
 
 from cudatext import *
-#from cudax_lib import get_translation
+from cudax_lib import get_translation
 
-#_   = get_translation(__file__)  # I18N
+_   = get_translation(__file__)  # I18N
 
 fn_config = os.path.join(app_path(APP_DIR_SETTINGS), 'cuda_tab_rename.json')
 PREFIX_KEY = 'renamed_tab_prefix'
@@ -17,7 +17,7 @@ class Command:
   def __init__(self):
     self.load_config()
       
-    menu_proc('tab', MENU_ADD, command='cuda_tab_rename.rename_current', caption='Rename tab')
+    menu_proc('tab', MENU_ADD, command='cuda_tab_rename.rename_current', caption=_('Rename tab'))
       
   def config(self):
     if not os.path.exists(fn_config):
@@ -31,7 +31,7 @@ class Command:
     path = ed.get_filename()
     if path:
       start_name = ed.get_prop(PROP_TAB_TITLE)
-      newname = dlg_input('New tab name for file:\n  '+path, start_name)
+      newname = dlg_input(_('New tab name for file:\n  ')+path, start_name)
       if newname  and newname != start_name:
         ed.set_prop(PROP_TAB_TITLE, prefix + newname)
         namemap[path] = newname
@@ -48,7 +48,7 @@ class Command:
   def on_open(self, ed_self):
     path = ed_self.get_filename()
     newname = namemap.get(path)
-    if newname != None:
+    if newname is not None:
       ed_self.set_prop(PROP_TAB_TITLE, prefix + newname)
         
   def on_save(self, ed_self):
