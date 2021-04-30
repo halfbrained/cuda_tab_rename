@@ -6,8 +6,10 @@ until you call the "Reset" command, or until plugin is uninstalled. Names of tab
 are stored in a file in the CudaText "settings" folder.
 
 Adds menu item "Rename tab" to editor tab context menu. 
-And commands to rename tab and reset name to main menu in:
+And a commands to rename tab to main menu in:
 	"Plugins > Tab-Rename" 
+
+If new name is empty - tab name will be reset to original.
 
 -----------------------------
 
