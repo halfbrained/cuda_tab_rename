@@ -14,11 +14,6 @@ section=commands
 caption=Tab-Rename\Rename Current Tab
 method=rename_current
 
-[item3]
-section=commands
-caption=Tab-Rename\Reset Current Tab Name
-method=clear_current
-
 [item100]
 section=commands
 caption=Tab-Rename\Config
